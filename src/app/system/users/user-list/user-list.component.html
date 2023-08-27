@@ -1,0 +1,32 @@
+<div class="container">
+  <div horizontal="end">
+    <button type="button" class="button cursor-pointer" ng-click="$ctrl.createNewUser()">
+      Create User
+    </button>
+  </div>
+
+  <table class="user-table">
+    <thead>
+      <tr class="user-table__row user-table__row--header">
+        <th class="user-table__cell user-table__cell--header">USERNAME</th>
+        <th class="user-table__cell user-table__cell--header">FIRST NAME</th>
+        <th class="user-table__cell user-table__cell--header">LAST NAME</th>
+        <th class="user-table__cell user-table__cell--header">EMAIL</th>
+        <th class="user-table__cell user-table__cell--header">TYPE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="user-table__row cursor-pointer"
+        ng-repeat="user in $ctrl.userService.users"
+        ng-click="$ctrl.editUser(user.id)"
+      >
+        <td class="user-table__cell">{{ user.username }}</td>
+        <td class="user-table__cell">{{ user.firstName }}</td>
+        <td class="user-table__cell">{{ user.lastName }}</td>
+        <td class="user-table__cell">{{ user.email }}</td>
+        <td class="user-table__cell">{{ user.type }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

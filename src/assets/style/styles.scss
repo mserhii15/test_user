@@ -1,0 +1,9 @@
+/* styles in src/style directory are applied to the whole page */
+@import "reset";
+@import "variables";
+@import "layout";
+@import "elements";
+
+.cursor-pointer {
+  cursor: pointer;
+}

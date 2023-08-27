@@ -1,0 +1,15 @@
+<div class="container-small">
+  <div class="card">
+    <form class="mb-10">
+      <label>Username: <input class="mb-10" type="text" ng-model="$ctrl.user.username" /></label><br />
+      <label>Password: <input class="mb-10" type="text" ng-model="$ctrl.user.password" /></label><br />
+      <div horizontal="between">
+        <button class="button" type="reset" ng-click="$ctrl.reset()">Reset</button>
+        <button class="button" type="submit" ng-click="$ctrl.onStartLogin()">Save</button>
+      </div>
+    </form>
+    <div class="mt-10" horizontal="center">
+      <a ui-sref="auth.registration">Registration</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "use1111rnamasdasde1",
+      "password": "password1",
+      "email": "test1@gmaissslwww.com222",
+      "firstName": "AdminFi111rstName1",
+      "lastName": "AdminLastName1",
+      "type": "Admin"
+    },
+    {
+      "id": 2,
+      "username": "username2",
+      "password": "password2",
+      "email": "test2@gmail.com",
+      "firstName": "DriverFirstName2",
+      "lastName": "DriverLastName1",
+      "type": "Driver"
+    },
+    {
+      "username": "xcvbn",
+      "email": "bdfbdfb@dsfd.dsffsd",
+      "firstName": "dfghjm",
+      "lastName": "dfbdbdf",
+      "type": "Admin",
+      "id": 3
+    },
+    {
+      "username": "fgdsfsdf",
+      "firstName": "sdfsdf",
+      "lastName": "sdfsdf",
+      "type": "Driver",
+      "id": 4
+    },
+    {
+      "username": "asdasd",
+      "firstName": "asdasdas",
+      "lastName": "dasdasd",
+      "type": "Driver",
+      "id": 5
+    },
+    {
+      "username": "asdasd",
+      "email": "asdasd@asdasd.sa",
+      "firstName": "asdasdas",
+      "lastName": "dasdasd",
+      "type": "Driver",
+      "id": 6
+    }
+  ]
+}

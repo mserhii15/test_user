@@ -1,0 +1,53 @@
+<form name="userForm" class="simple-form">
+  <label>username: <input required type="text" ng-model="$ctrl.user.username"/></label><br/>
+
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required ng-model="$ctrl.user.username">
+  <div class="error" ng-show="userForm.username.$dirty && userForm.username.$invalid">
+    <span ng-show="userForm.username.$error.required">Username is required.</span>
+  </div>
+
+  <label for="firstName">FirstName:</label>
+  <input type="text" id="firstName" name="firstName" required ng-model="$ctrl.user.firstName">
+  <div class="error" ng-show="userForm.firstName.$dirty && userForm.firstName.$invalid">
+    <span ng-show="userForm.firstName.$error.required">FirstName is required.</span>
+  </div>
+
+  <label for="lastName">LastName:</label>
+  <input type="text" id="lastName" name="lastName" required ng-model="$ctrl.user.lastName">
+  <div class="error" ng-show="userForm.lastName.$dirty && userForm.lastName.$invalid">
+    <span ng-show="userForm.lastName.$error.required">LastName is required.</span>
+  </div>
+
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="email" required ng-model="$ctrl.user.email">
+  <div class="error" ng-show="userForm.email.$dirty && userForm.email.$invalid">
+    <span ng-show="userForm.email.$error.required">Email is required.</span>
+  </div>
+
+
+  <label>type: <select ng-model="$ctrl.user.type">
+    <option value="Admin">Admin</option>
+    <option value="Driver">Driver</option>
+  </select></label><br/>
+
+
+  <label for="password">Password:</label>
+  <input type="text" ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/" id="password" name="password" required
+         ng-model="$ctrl.user.password">
+  <div class="error" ng-show="userForm.password.$dirty && userForm.password.$invalid">
+    <span ng-show="userForm.password.$error.required">Password is required.</span>
+  </div>
+
+  <label for="repeatPassword">Repeat Password:</label>
+  <input type="text" ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/" id="repeatPassword" name="repeatPassword"
+         required ng-model="$ctrl.repeatPassword" repeat-password-validation-directive current-password="$ctrl.user.password" >
+  <div class="error" ng-show="userForm.repeatPassword.$dirty && userForm.repeatPasswordValidationDirective.$invalid">
+    <span ng-show="userForm.repeatPassword.$error.required">Password is required.</span>
+    <span ng-show="userForm.repeatPassword.$error.repeatPasswordValidation">Repeat Password and Password should be same.</span>
+  </div>
+
+
+  <button type="button" ng-if="$ctrl.user.id" ng-click="$ctrl.deleteUser()">delete</button>
+  <button type="submit" ng-disabled="userForm.$invalid" ng-click="$ctrl.onSaveUser()">Save</button>
+</form>

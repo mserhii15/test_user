@@ -1,0 +1,52 @@
+.button {
+  border: none;
+  padding: 12px 20px;
+  color: var(--white-color);
+  border-radius: 4px;
+}
+
+button[type='submit'],
+button[type='button'] {
+  background-color: var(--primary-color);
+}
+
+button[type='reset'] {
+  background-color: var(--warn-color);
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.input-icon {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.input-icon input[type='email'] {
+  padding-left: 25px;
+}
+
+.input-icon::before {
+  content: '@';
+  position: absolute;
+  font-size: 20px;
+  font-weight: 700;
+  left: 5px;
+  top: 50%;
+  color: var(--grey-color);
+}
+
+.card {
+  border: 1px solid var(--grey-color);
+  border-radius: 7px;
+  padding: 20px;
+}
